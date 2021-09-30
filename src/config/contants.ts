@@ -1,4 +1,4 @@
-import { CSSIcon, DevelopmentIcon, GithubIcon,GitIcon,HTMLIcon,JSIcon,LinkedinIcon,PerformanceIcon,ReactJSIcon,ResponsiveIcon,SASSIcon,TwitterIcon } from "../views/components/assets";
+import { CSSIcon, DevelopmentIcon, GithubIcon,GitIcon,HTMLIcon,IPProject,JSIcon,LinkedinIcon,PerformanceIcon,ReactJSIcon,ResponsiveIcon,SASSIcon,TwitterIcon } from "../views/components/assets";
 
 const SOCIALS_ITEMS = [
     {
@@ -75,6 +75,46 @@ const FEATURES_LIST = [
     }
 ]
 
+const PROJECTS_LIST = [
+    {
+        id: 1,
+        title: 'IP-address-tracker',
+        image: IPProject,
+        description: 'This is a solution to the IP address tracker challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.',
+        links:{
+            github: 'https://github.com/robertoms99/IP-address-tracker',
+            web: 'https://ip-address-tracker-challenge.netlify.app/'
+        }
+    },
+    {
+        id: 2,
+        title: 'github-jobs-challenge',
+        image: IPProject,
+        description: 'This is a challenge to github job challenge (https://devchallenges.io/)',
+        links:{
+            github: 'https://github.com/robertoms99/github-jobs-challenge'
+        }
+    },
+    {
+        id: 3,
+        title: 'github-jobs-challenge',
+        image: IPProject,
+        description: 'This is a challenge to github job challenge (https://devchallenges.io/)',
+        links:{
+            github: 'https://github.com/robertoms99/github-jobs-challenge'
+        }
+    },
+    {
+        id: 4,
+        image: IPProject,
+        title: 'github-jobs-challenge',
+        description: 'This is a challenge to github job challenge (https://devchallenges.io/)',
+        links:{
+            github: 'https://github.com/robertoms99/github-jobs-challenge'
+        }
+    }
+]
+
 const STORAGE_THEME_VALUES = {
     dark: 'dark',
     light: 'light'
@@ -88,4 +128,4 @@ const INITIAL_STATE= {
     theme: window.localStorage.getItem('theme') ?? STORAGE_THEME_VALUES.light
 }
 
-export {SOCIALS_ITEMS,TECHNOLOGIES_LIST,FEATURES_LIST,INITIAL_STATE,STORAGE_THEME_VALUES,ACTIONS_TYPES }
+export {SOCIALS_ITEMS,TECHNOLOGIES_LIST,FEATURES_LIST,INITIAL_STATE,STORAGE_THEME_VALUES,ACTIONS_TYPES,PROJECTS_LIST }

@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { AboutSection,WhatIDoSection,WhoAmISection,Footer } from "./components/sections"
+import ProjectsSection from "./components/sections/ProjectsSection/ProjectsSection"
 import { useCaretify, useTheme } from "./hooks"
 
 const App = ()=> {
@@ -11,6 +12,7 @@ const App = ()=> {
             <AboutSection />
             <WhoAmISection />
             <WhatIDoSection />
+            <ProjectsSection />
             <Footer />
         </main>
     )
