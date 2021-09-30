@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { MeImage } from "../../assets"
-import { Button,Media } from "../../ui"
+import { MeImage, MyCV } from "../../assets"
+import { Button,Link,Media } from "../../ui"
 
 const WhoAmISection = ()=> {
     const [show,setShow] = useState(false)
@@ -22,7 +22,9 @@ const WhoAmISection = ()=> {
                     He like to work in team. My taste for development started in <span className="accent">2020</span> when I started seeing beautiful web pages.
                     Since then I have immersed myself in a rapid advance to improve and make the most of my time.<br />
                 </p>
-                <Button.Primary className="who-am-button">view resume</Button.Primary>
+                <Link href={MyCV} download="Roberto Molina Curriculum" target="_blank">
+                    <Button.Primary className="who-am-button">view resume</Button.Primary>
+                </Link>
             </article>
         </section>
     )

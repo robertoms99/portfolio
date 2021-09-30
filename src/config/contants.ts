@@ -25,32 +25,32 @@ const TECHNOLOGIES_LIST= [
     {
         id: 1,
         icon: HTMLIcon,
-        label: 'html'
+        label: 'Html'
     },
     {
         id: 2,
         icon: CSSIcon,
-        label: 'css'
+        label: 'Css'
     },
     {
         id: 3,
         icon: JSIcon,
-        label: 'javascript'
+        label: 'JavaScript'
     },
     {
         id: 4,
         icon: SASSIcon,
-        label: 'sass'
+        label: 'Sass'
     },
     {
         id: 5,
         icon: ReactJSIcon,
-        label: 'reactjs'
+        label: 'Reactjs'
     },
     {
         id: 6,
         icon: GitIcon,
-        label: 'git'
+        label: 'Git'
     }
 ]
 

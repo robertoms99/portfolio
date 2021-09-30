@@ -11,4 +11,5 @@ export {ReactComponent as ReactJSIcon} from '../../assets/icons/reactjs-icon.svg
 export {ReactComponent as PerformanceIcon} from '../../assets/icons/performance-icon.svg'
 export {ReactComponent as ResponsiveIcon} from '../../assets/icons/responsive-icon.svg'
 export {ReactComponent as DevelopmentIcon} from '../../assets/icons/development-icon.svg'
+export {default as MyCV} from '../../assets/data/ROBERTO_MOLINA_CURRICULUM_SOFTWARE_DEVELOPER.pdf'
 export {default as MeImage} from '../../assets/images/me.png'
