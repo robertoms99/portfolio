@@ -7,6 +7,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "netlify-cli": "^6.9.28",
     "react-scripts": "4.0.3",
     "sass": "^1.42.1",
     "typescript": "^4.1.2"
@@ -21,6 +22,7 @@
     "redux": "^4.1.1"
   },
   "scripts": {
+    "deploy": "yarn build && netlify deploy --prod",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
