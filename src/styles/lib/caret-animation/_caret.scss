@@ -1,0 +1,15 @@
+@use './caret-animation' as *;
+
+.caret-animation-starting {
+  &::after {
+    content: '|';
+    vertical-align: top;
+    display: inline-block;
+    font-weight: bold;
+    opacity: 0;
+    animation-name: caretAnimation;
+    animation-timing-function: ease-out;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+  }
+}

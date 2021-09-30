@@ -1,0 +1,36 @@
+@use '../abstracts/mixin' as *;
+
+.who-am{
+  overflow: hidden;
+  background: var(--color-light-grey);
+   justify-content: center;
+   min-height: auto;
+   @include responsive('lg'){
+     min-height: 100vh;
+    align-items: center;
+  }
+
+  &-banner{
+    &--left{
+      @include responsive('lg',true){
+        // flex: none;
+      }
+    }
+    &--right{
+      @include responsive('lg',true){
+        width: 100%;
+      }
+    }
+  }
+  &-description{
+    @include responsive('lg'){
+      max-width: 90%;
+    }
+    margin: 3em 0 1em;
+  }
+  &-button{
+    margin-top: 2em;
+  }
+}
+
+

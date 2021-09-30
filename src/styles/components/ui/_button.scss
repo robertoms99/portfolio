@@ -1,0 +1,32 @@
+.button {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 1px;
+  padding: 1em 2em;
+  &--primary,
+  &--ghost:hover {
+    color: white;
+    background-color: var(--color-primary);
+  }
+  &--primary,
+  &--ghost{
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0 1rem 2rem -1rem var(--color-primary);
+    transition: all 120ms;
+    &:hover {
+      @media screen and (hover:hover){
+        transform: translateY(1px);
+        box-shadow: 0 1rem 2rem -2rem var(--color-primary);
+      }
+    }
+    &:active{
+      box-shadow: 0 1rem 2rem -2rem var(--color-primary);
+      transform: translateY(2px);
+    }
+  }
+  &--ghost{
+    border: 1px solid ;
+    color: var(--color-primary);
+  }
+}

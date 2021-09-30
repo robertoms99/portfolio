@@ -1,0 +1,102 @@
+@use '../abstracts/mixin' as *;
+
+.home {
+  --dimension-icons: calc(1em + 3vmin);
+}
+
+.theme{
+  margin-bottom: 3em;
+  .icon{
+    width: var(--dimension-icons);
+    height: var(--dimension-icons);
+   }
+}
+
+.me-wrapper::before,
+.me{
+  mask-image: url(../../assets/images/blob-shape-darkest.svg);
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url(../../assets/images/blob-shape-darkest.svg);
+  -webkit-mask-repeat: no-repeat;
+}
+
+
+.me-wrapper{
+  position: relative;
+  align-self: center;
+  width: 100%;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-lightest-primary);
+    mask-position: 60% ;
+    -webkit-mask-position: 60%;
+  }
+}
+
+.me{
+  -webkit-mask-position: center ;
+  mask-position: center ;
+  box-shadow: 2px 2px 0 white;
+  background-image: linear-gradient(to right top, var(--color-dark-primary), var(--color-primary));
+  width: 60%;
+  margin: 3em auto;
+  opacity: 0;
+  transform: translate(20% ,-20%);
+  transition: all  300ms 650ms;
+  &.show{
+    transform: translate(0 ,0);
+    opacity: 1;
+  }
+  @include responsive('sm',true){
+    width: 100%;
+  }
+  @include responsive('lg'){
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.cta{
+  display: block;
+  margin-top: 2.5em;
+  width: max-content;
+}
+
+.name{
+  position: relative;
+  &::before{
+    content: '<';
+    position: absolute;
+    right: 100%;
+  }
+}
+
+.card-wrapper{
+  &--what-do{
+    --margin-width: 1em;
+    --col-card-wrapper: 2;
+    --track-gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(var(--col-card-wrapper), minmax(15rem, auto));
+    grid-template-rows: repeat(var(--col-card-wrapper), auto);
+    justify-content: center;
+    grid-gap: var(--track-gap);
+    @include responsive('lg'){
+      --col-card-wrapper: 2;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      min-height: 120%;
+      margin-left: var( --margin-width);
+      width: calc(100% - (var( --margin-width) * 2));
+    }
+    @include responsive('sm', true){
+      --col-card-wrapper: 1;
+    }
+  }
+}

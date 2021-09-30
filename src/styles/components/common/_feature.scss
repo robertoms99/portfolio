@@ -1,0 +1,20 @@
+.feature{
+  &__title{
+    margin: .5em auto 1em;
+  }
+  &__description{
+    color: var(--color-grey);
+  }
+  &__icon-wrapper{
+    background-color: var(--color-lightest-primary);
+    display: inline-block;
+    border-radius: 50%;
+    width: calc(var(--dimension-icons) - .5em);
+    height: calc(var(--dimension-icons) - .5em);
+  }
+  &__icon{
+    width: calc(var(--dimension-icons) - .25em);
+    height: calc(var(--dimension-icons) - .25em);
+    transform: translate(25%, -25%);
+  }
+}

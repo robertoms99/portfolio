@@ -1,0 +1,19 @@
+@use '../abstracts/mixin' as *;
+
+.block-decoration{
+  display: block;
+  border-left: 2px solid var(--color-primary) ;
+  padding-left: 1em;
+}
+
+.col-left{
+  min-width: 50%;
+  flex: 1;
+}
+
+.col-right{
+  width: 50%;
+  &--smallest{
+    width: 40%;
+  }
+}

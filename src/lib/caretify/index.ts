@@ -1,0 +1,1 @@
+export { initializerCaretAnimations } from './caretify';

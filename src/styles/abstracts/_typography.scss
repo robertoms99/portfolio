@@ -1,0 +1,30 @@
+@use './mixin' as *;
+
+.heading{
+  text-transform: uppercase;
+  font-weight: bold;
+  &--primary{
+    font-size: 3.75em;
+    @include responsive('md'){
+font-size: 4em;
+    }
+  }
+  &--tertiary{
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+}
+
+.heading--accent ,
+.accent {
+  color: var(--color-primary);
+}
+
+.accent{
+  font-weight: 500;
+}
+
+.paragraph {
+  line-height: 1.7;
+}
+

@@ -1,0 +1,28 @@
+@use '../abstracts/mixin' as *;
+
+.section {
+  min-height: 100vh;
+  background-color: var(--color-section-background);
+  padding: 3em 5em;
+  @include responsive('sm',true){
+    padding: 2.5em 3em;
+  }
+  @include responsive('xsm',true){
+    padding: 2.5em 2.15;
+  }
+  @include responsive('xxsm',true){
+    padding: 2.5em 1.15em;
+  }
+}
+
+.what-do,
+.who-am {
+  display: flex;
+  flex-direction: column;
+  @include responsive('lg'){
+    flex-direction: row;
+  }
+}
+
+
+

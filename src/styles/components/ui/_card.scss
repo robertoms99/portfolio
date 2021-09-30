@@ -1,0 +1,16 @@
+.card{
+  padding:  2.5em 2em;
+  border-radius: .2rem;
+  box-shadow: 2px 2px 1rem -5px var(--color-grey);
+  &--what-do {
+    background-color: var(--color-white);
+    &--1{
+      grid-row: 1 / -1;
+      align-self: center;
+    }
+  }
+}
+
+body.dark .card{
+  box-shadow: 2px 2px .5rem -5px var(--color-black);
+}

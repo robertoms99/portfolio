@@ -1,0 +1,88 @@
+@use "sass:map";
+@use '../abstracts/variables' as *;
+.grid {
+  $cols: 12;
+  $gutter-scales: 5;
+  $col-width: calc(100% / #{$cols});
+  display: grid;
+  grid-template-columns: repeat(#{$cols}, 1fr);
+  @for $i from 1 through $gutter-scales {
+    $gap: calc((1vmax) * #{$i});
+    &[data-gutter-y='#{$i}'] {
+      grid-row-gap: $gap;
+    }
+    &[data-gutter-x='#{$i}'] {
+      grid-column-gap: $gap;
+    }
+  }
+  .grid__col {
+    overflow: hidden;
+    @for $i from 1 through $cols {
+      &[data-col='#{$i}'] {
+        grid-column-end: span #{$i};
+      }
+    }
+    &[data-col='auto'] {
+      grid-column-end: span -1;
+    }
+    &[data-align-x],
+    &[data-align-y] {
+      display: flex;
+      align-items: flex-start;
+    }
+    &[data-align-y='start'] {
+      align-items: flex-start;
+    }
+    &[data-align-y='end'] {
+      align-items: flex-end;
+    }
+    &[data-align-y='center'] {
+      align-items: center;
+    }
+    &[data-align-x='start'] {
+      justify-content: flex-start;
+    }
+    &[data-align-x='center'] {
+      justify-content: center;
+    }
+    &[data-align-x='end'] {
+      justify-content: flex-end;
+    }
+
+    @each $breakpoint, $value in $breakpoints {
+      @media (max-width: #{$value}) {
+        @for $i from 1 through $cols {
+          &[data-#{$breakpoint}-col='#{$i}'] {
+            grid-column-end: span #{$i} !important;
+          }
+        }
+        &[data-#{$breakpoint}-align-x],
+        &[data-#{$breakpoint}-align-y] {
+          display: flex;
+          align-items: flex-start !important;
+        }
+        &[data-#{$breakpoint}-col='auto'] {
+          grid-column-end: span -1 !important;
+        }
+        &[data-#{$breakpoint}-align-y='start'] {
+          align-items: flex-start !important;
+        }
+        &[data-#{$breakpoint}-align-y='end'] {
+          align-items: flex-end !important;
+        }
+        &[data-#{$breakpoint}-align-y='center'] {
+          align-items: center !important;
+        }
+        &[data-#{$breakpoint}-align-x='start'] {
+          justify-content: flex-start !important;
+        }
+        &[data-#{$breakpoint}-align-x='center'] {
+          justify-content: center !important;
+        }
+        &[data-#{$breakpoint}-align-x='end'] {
+          justify-content: flex-end !important;
+        }
+      }
+    }
+  }
+}

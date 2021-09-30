@@ -1,0 +1,38 @@
+@use './mixin' as *;
+
+body {
+  color: var(--color-black);
+  font-family: var(--font-family-primary);
+  font-size: var(--initial-font-size);
+  @include responsive('xxlg'){
+    font-size: 2rem;
+  }
+  @include responsive('xxxlg'){
+    font-size: 2.4rem;
+  }
+  @include responsive('md',true){
+    font-size: 1.35rem;
+  }
+  @include responsive('xsm',true){
+    font-size: 1.1rem;
+  }
+  /*
+  @include responsive('xxsm',true){
+    font-size: .95rem;
+  }*/
+}
+
+body.dark{
+  color: white;
+  --color-light-grey: var(--color-dark-black);
+  --color-white: var(--color-dark-black);
+  --color-section-background: var(--color-darkest-black);
+  --color-lightest-primary: var(--color-darkest-black);
+  --color-transparent-white: var(--color-dark-transparent-black);
+}
+
+html,
+body{
+  scroll-behavior: smooth;
+}
+

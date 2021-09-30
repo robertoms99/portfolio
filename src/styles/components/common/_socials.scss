@@ -1,0 +1,19 @@
+.socials{
+  margin-top: 3em;
+  margin-bottom: auto;
+  &__item{
+    &:not(:last-child){
+      margin-right: 1.25em;
+    }
+  }
+  &__icon{
+    fill: currentColor;
+    transition: transform 150ms;
+    width: var(--dimension-icons);
+    height: var(--dimension-icons);
+    &:hover{
+      color: var(--color-primary);
+      transform: scale(1.15);
+    }
+  }
+}
