@@ -97,11 +97,11 @@ const PROJECTS_LIST = [
     },
     {
         id: 3,
-        title: 'github-jobs-challenge',
+        title: 'My portfolio',
         image: IPProject,
-        description: 'This is a challenge to github job challenge (https://devchallenges.io/)',
+        description: 'This is my personal portfolio made with ReactJS',
         links:{
-            github: 'https://github.com/robertoms99/github-jobs-challenge'
+            github: 'https://github.com/robertoms99/portfolio'
         }
     },
     {
