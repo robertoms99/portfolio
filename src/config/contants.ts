@@ -99,7 +99,7 @@ const PROJECTS_LIST = [
         id: 3,
         title: 'My portfolio',
         image: IPProject,
-        description: 'This is my personal portfolio made with ReactJS',
+        description: 'This is my personal portfolio made with ReactJs',
         links:{
             github: 'https://github.com/robertoms99/portfolio'
         }
