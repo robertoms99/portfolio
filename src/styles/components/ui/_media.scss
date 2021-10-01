@@ -7,5 +7,9 @@
     &--center{
       object-position:center;
     }
+    &--normal {
+      height: auto;
+      object-fit: initial;
+    }
   }
 }

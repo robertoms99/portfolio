@@ -80,7 +80,7 @@ const PROJECTS_LIST = [
         id: 1,
         title: 'IP-address-tracker',
         image: IPProject,
-        description: 'This is a solution to the IP address tracker challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.',
+        description: 'This is a solution to the IP address tracker challenge on Frontend Mentor.',
         links:{
             github: 'https://github.com/robertoms99/IP-address-tracker',
             web: 'https://ip-address-tracker-challenge.netlify.app/'
@@ -88,7 +88,7 @@ const PROJECTS_LIST = [
     },
     {
         id: 2,
-        title: 'github-jobs-challenge',
+        title: 'github jobs',
         image: GithubJobsImage,
         description: 'This is a challenge to github job challenge (https://devchallenges.io/)',
         links:{

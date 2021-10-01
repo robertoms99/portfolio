@@ -2,9 +2,9 @@
 
 .projects{
   min-height: auto;
-  @include responsive('lg'){
+  /*@include responsive('lg'){
     min-height: 100vh;
- }
+ }*/
 /*  --items-to-display: 1;
   @include responsive('md'){
     --items-to-display: 2;
