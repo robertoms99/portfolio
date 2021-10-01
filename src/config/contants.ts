@@ -1,4 +1,4 @@
-import { CSSIcon, DevelopmentIcon, GithubIcon,GitIcon,HTMLIcon,IPProject,JSIcon,LinkedinIcon,PerformanceIcon,ReactJSIcon,ResponsiveIcon,SASSIcon,TwitterIcon } from "../views/components/assets";
+import { CSSIcon, DevelopmentIcon, GithubIcon,GithubJobsImage,GitIcon,HTMLIcon,IPProject,JSIcon,LinkedinIcon,PerformanceIcon,PortfolioImage,ReactJSIcon,ResponsiveIcon,SASSIcon,TwitterIcon } from "../views/components/assets";
 
 const SOCIALS_ITEMS = [
     {
@@ -89,7 +89,7 @@ const PROJECTS_LIST = [
     {
         id: 2,
         title: 'github-jobs-challenge',
-        image: IPProject,
+        image: GithubJobsImage,
         description: 'This is a challenge to github job challenge (https://devchallenges.io/)',
         links:{
             github: 'https://github.com/robertoms99/github-jobs-challenge'
@@ -98,7 +98,7 @@ const PROJECTS_LIST = [
     {
         id: 3,
         title: 'My portfolio',
-        image: IPProject,
+        image: PortfolioImage,
         description: 'This is my personal portfolio made with ReactJs',
         links:{
             github: 'https://github.com/robertoms99/portfolio'

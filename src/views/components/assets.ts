@@ -15,3 +15,5 @@ export {ReactComponent as ExternalIcon} from '../../assets/icons/external-link.s
 export {default as IPProject} from '../../assets/images/ip-address-tracker-screenshot.png'
 export {default as MyCV} from '../../assets/data/ROBERTO_MOLINA_CURRICULUM_SOFTWARE_DEVELOPER.pdf'
 export {default as MeImage} from '../../assets/images/me.png'
+export {default as PortfolioImage} from '../../assets/images/portfolio.png'
+export {default as GithubJobsImage} from '../../assets/images/github-job.png'
