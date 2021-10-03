@@ -92,7 +92,8 @@ const PROJECTS_LIST = [
         image: GithubJobsImage,
         description: 'This is a challenge to github job challenge (https://devchallenges.io/)',
         links:{
-            github: 'https://github.com/robertoms99/github-jobs-challenge'
+            github: 'https://github.com/robertoms99/github-jobs-challenge',
+            web: 'https://job-searcher-challenge.netlify.app/'
         }
     },
     {
