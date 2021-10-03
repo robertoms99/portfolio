@@ -1,4 +1,3 @@
-import cn from 'classnames'
 import {Button, Link} from '../../../../ui'
 
 const Banner = () =>{

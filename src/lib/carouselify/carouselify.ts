@@ -145,6 +145,7 @@ const attachControlsHandler = (element: Element) => {
 
   for (let index = 0; index < dotsIndicatorsElements.length; index++) {
     const dotElement = dotsIndicatorsElements[index]
+    /* eslint-disable  no-loop-func*/
     dotElement.addEventListener('click', () => handleControlSlide(element, index - currentIndex)
     )
   }
