@@ -1,35 +1,35 @@
 @use '../abstracts/mixin' as *;
 
-.projects{
-  min-height: auto;
-  /*@include responsive('lg'){
-    min-height: 100vh;
- }*/
-/*  --items-to-display: 1;
-  @include responsive('md'){
-    --items-to-display: 2;
-   }
-  @include responsive('lg'){
-    --items-to-display: 3;
- } */
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 
-  &__carousel{
-    width: 95%;
+  width: 100%;
+  &-wrapper {
+    margin: auto;
+    max-width: 112rem;
+    width: 100%;
+  }
+
+  &__carousel {
+    width: 100%;
     margin: auto;
     margin-top: 3em;
-    .carouselify__control{
+    .carouselify__control {
       background-color: var(--color-white);
       border-radius: 50%;
-      box-shadow: 0 .7rem 4rem -2rem rgba(0, 0, 0);
+      box-shadow: 1px 1px 0.5rem -0.2rem black;
       font-weight: 900;
       &:hover,
-      &:active{
+      &:active {
         color: var(--color-primary);
       }
     }
-    .carouselify__dot{
+    .carouselify__dot {
       border: 1px solid var(--color-primary);
-      &--active{
+      &--active {
         background-color: var(--color-primary);
       }
     }

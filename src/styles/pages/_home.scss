@@ -4,80 +4,80 @@
   --dimension-icons: calc(1em + 3vmin);
 }
 
-.theme{
+.theme {
   margin-bottom: 3em;
-  .icon{
+  .icon {
     width: var(--dimension-icons);
     height: var(--dimension-icons);
-   }
+  }
 }
 
 .me-wrapper::before,
-.me{
-  mask-image: url(../../assets/images/blob-shape-darkest.svg);
-  mask-repeat: no-repeat;
+.me {
   -webkit-mask-image: url(../../assets/images/blob-shape-darkest.svg);
   -webkit-mask-repeat: no-repeat;
+  mask-image: url(../../assets/images/blob-shape-darkest.svg);
+  mask-repeat: no-repeat;
 }
 
-
-.me-wrapper{
+.me-wrapper {
   position: relative;
   align-self: center;
   width: 100%;
-  &::before{
-    content: '';
+  &::before {
+    // content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: var(--color-lightest-primary);
-    mask-position: 60% ;
-    -webkit-mask-position: 60%;
+    -webkit-mask-position: center;
+    mask-position: center;
   }
 }
 
-.me{
-  -webkit-mask-position: center ;
-  mask-position: center ;
+.me {
   box-shadow: 2px 2px 0 white;
   background-image: linear-gradient(to right top, var(--color-dark-primary), var(--color-primary));
   width: 60%;
   margin: 3em auto;
   opacity: 0;
-  transform: translate(20% ,-20%);
-  transition: all  300ms 650ms;
-  &.show{
-    transform: translate(0 ,0);
+  transform: translate(20%, -20%);
+  transition: all 300ms 650ms;
+  img {
+    // object-position: -2.5rem !important;
+  }
+  &.show {
+    transform: translate(0, 0);
     opacity: 1;
   }
-  @include responsive('sm',true){
+  @include responsive('sm', true) {
     width: 100%;
   }
-  @include responsive('lg'){
+  @include responsive('lg') {
     width: 100%;
     margin: auto;
   }
 }
 
-.cta{
+.cta {
   display: block;
   margin-top: 2.5em;
   width: max-content;
 }
 
-.name{
+.name {
   position: relative;
-  &::before{
+  &::before {
     content: '<';
     position: absolute;
     right: 100%;
   }
 }
 
-.card-wrapper{
-  &--what-do{
+.card-wrapper {
+  &--what-do {
     --margin-width: 1em;
     --col-card-wrapper: 2;
     --track-gap: 1em;
@@ -86,16 +86,16 @@
     grid-template-rows: repeat(var(--col-card-wrapper), auto);
     justify-content: center;
     grid-gap: var(--track-gap);
-    @include responsive('lg'){
+    @include responsive('lg') {
       --col-card-wrapper: 2;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       min-height: 120%;
-      margin-left: var( --margin-width);
-      width: calc(100% - (var( --margin-width) * 2));
+      margin-left: var(--margin-width);
+      width: calc(100% - (var(--margin-width) * 2));
     }
-    @include responsive('sm', true){
+    @include responsive('sm', true) {
       --col-card-wrapper: 1;
     }
   }

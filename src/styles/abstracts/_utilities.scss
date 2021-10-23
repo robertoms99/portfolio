@@ -1,19 +1,21 @@
 @use '../abstracts/mixin' as *;
 
-.block-decoration{
-  display: block;
-  border-left: 2px solid var(--color-primary) ;
-  padding-left: 1em;
+.block-decoration {
+  @include responsive('lg') {
+    display: block;
+    border-left: 2px solid var(--color-primary);
+    padding-left: 1em;
+  }
 }
 
-.col-left{
+.col-left {
   min-width: 50%;
   flex: 1;
 }
 
-.col-right{
+.col-right {
   width: 50%;
-  &--smallest{
+  &--smallest {
     width: 40%;
   }
 }

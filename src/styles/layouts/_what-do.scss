@@ -2,34 +2,33 @@
 
 .what-do {
   background: var(--color-lightest-primary);
-  &-banner{
-    &--left{
-      padding: 2.5em 5em;
-      @include responsive('sm',true){
-        padding: 2.5em 3em;
-      }
-      @include responsive('xsm',true){
-        padding: 2.5em 2.15em;
-      }
-      @include responsive('xxsm',true){
-        padding: 2.5em 1.15em;
-      }
+  padding: 3em 0;
+  @include responsive('xlg', true) {
+    padding: 3em;
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 112rem;
+    margin: 0 auto;
+    @include responsive('lg') {
+      flex-direction: row;
     }
+  }
+  &-banner {
     &--left,
     &--right {
       width: 100%;
-      @include responsive('lg'){
+      @include responsive('lg') {
         width: 50%;
       }
     }
     &--right {
-      background:  url(../../assets/images/sparks.svg) -20% 90%/90% 90% no-repeat;
+      background: url(../../assets/images/sparks.svg) -20% 90%/90% 90% no-repeat;
       position: relative;
-      @include responsive('lg',true){
+      padding: 2em 0;
+      @include responsive('lg') {
         padding: 2em 3em;
-      }
-      @include responsive('xsm',true){
-        padding: 2em 2.15;
       }
     }
   }
@@ -41,14 +40,15 @@
 .technologies {
   margin-top: 1em;
   margin-left: 1em;
-  &__item{
+
+  &__item {
     min-width: 20rem;
     margin-bottom: 1em;
   }
-  &__icon{
+  &__icon {
     width: 1em;
     height: 1em;
-    margin-right: .25em;
-    vertical-align:middle ;
+    margin-right: 0.25em;
+    vertical-align: middle;
   }
 }

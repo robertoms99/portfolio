@@ -4,25 +4,13 @@ body {
   color: var(--color-black);
   font-family: var(--font-family-primary);
   font-size: var(--initial-font-size);
-  @include responsive('xxlg'){
-    font-size: 2rem;
-  }
-  @include responsive('xxxlg'){
-    font-size: 2.4rem;
-  }
-  @include responsive('md',true){
-    font-size: 1.35rem;
-  }
-  @include responsive('xsm',true){
+  background-color: var(--color-section-background);
+  @include responsive('xsm', true) {
     font-size: 1.1rem;
   }
-  /*
-  @include responsive('xxsm',true){
-    font-size: .95rem;
-  }*/
 }
 
-body.dark{
+body.dark {
   color: white;
   --color-light-grey: var(--color-dark-black);
   --color-white: var(--color-dark-black);
@@ -32,7 +20,6 @@ body.dark{
 }
 
 html,
-body{
+body {
   scroll-behavior: smooth;
 }
-

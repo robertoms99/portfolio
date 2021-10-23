@@ -3,12 +3,10 @@
 .about {
   display: flex;
   flex-direction: column;
-  background-image: url(../../assets/images/triangle-shape.svg) ;
-  background-position: 105% top;
-  background-size: 40%;
-  background-repeat: no-repeat;
   justify-content: center;
   align-items: flex-start;
+  max-width: 112rem;
+  margin: auto;
 }
 
 .banner {

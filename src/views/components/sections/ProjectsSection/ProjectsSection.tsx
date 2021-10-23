@@ -8,13 +8,15 @@ const ProjectsSection = () => {
 
   return (
     <section className="[ section ] [ projects ]" id="projects">
-      <h4 className="[ heading heading--accent ] [ caret ]">mis proyectos</h4>
-      <h1 className="heading heading--primary">ultimos trabajos</h1>
-      <Carousel className="projects__carousel" ref={carouselifyRef}>
-        {PROJECTS_LIST.map((PROJECT) => (
-          <ProjectItem key={PROJECT.id} project={PROJECT} />
-        ))}
-      </Carousel>
+      <div className="projects-wrapper">
+        <h4 className="[ heading heading--accent ] [ caret ]">mis proyectos</h4>
+        <h1 className="heading heading--primary">ultimos trabajos</h1>
+        <Carousel className="projects__carousel" ref={carouselifyRef}>
+          {PROJECTS_LIST.map((PROJECT) => (
+            <ProjectItem key={PROJECT.id} project={PROJECT} />
+          ))}
+        </Carousel>
+      </div>
     </section>
   )
 }
