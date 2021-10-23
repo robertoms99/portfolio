@@ -1,4 +1,3 @@
-
 const DOM_STRING = {
   carouselify: 'carouselify',
   controls: 'carouselify__control',
@@ -43,10 +42,17 @@ const initCarouselify = (element: Element, configuration: CarouselifyConfigInter
 }
 
 const saveConfiguration = (element: Element, configuration: CarouselifyConfigInterface) => {
-  bindElementWithConfiguration.set(element, Object.assign(INITIAL_CONFIGURATION_CAROUSELIFY, configuration))
+  bindElementWithConfiguration.set(
+    element,
+    Object.assign(INITIAL_CONFIGURATION_CAROUSELIFY, configuration)
+  )
 }
 
-const attachMatchMediaHandler = (element: Element, responsiveConfigurationList: CarouselifyResponsiveConfigInterface[], initialConfiguration: CarouselifyConfigInterface) => {
+const attachMatchMediaHandler = (
+  element: Element,
+  responsiveConfigurationList: CarouselifyResponsiveConfigInterface[],
+  initialConfiguration: CarouselifyConfigInterface
+) => {
   /* responsiveConfigurationList.forEach((responsiveConfiguration: CarouselifyResponsiveConfigInterface) => {
      const mqList = window.matchMedia(`(max-width: ${DEVICES_BREAKPOINTS.get(responsiveConfiguration.device)}em)`)
      mqList.addEventListener('change', () => {
@@ -55,7 +61,7 @@ const attachMatchMediaHandler = (element: Element, responsiveConfigurationList: 
          setConfigurationInlineStyles(element, responsiveConfiguration)
        }
      })
-   })*/
+   }) */
   console.log(responsiveConfigurationList)
 
   const testMqList = () => {
@@ -75,7 +81,11 @@ const attachMatchMediaHandler = (element: Element, responsiveConfigurationList: 
   }
 
   const mqList1 = window.matchMedia(`(max-width: ${(DEVICES_BREAKPOINTS.get('MD') ?? 0) - 1}em)`)
-  const mqList2 = window.matchMedia(`(max-width: ${(DEVICES_BREAKPOINTS.get('LG') ?? 0) - 1}em) and (min-width: ${DEVICES_BREAKPOINTS.get('MD')}em)`)
+  const mqList2 = window.matchMedia(
+    `(max-width: ${
+      (DEVICES_BREAKPOINTS.get('LG') ?? 0) - 1
+    }em) and (min-width: ${DEVICES_BREAKPOINTS.get('MD')}em)`
+  )
   const mqList3 = window.matchMedia(`(min-width: ${DEVICES_BREAKPOINTS.get('LG')}em)`)
   mqList1.addEventListener('change', testMqList)
   mqList2.addEventListener('change', testMqList)
@@ -85,7 +95,8 @@ const attachMatchMediaHandler = (element: Element, responsiveConfigurationList: 
 }
 
 const applyConfiguration = (element: Element) => {
-  const configurationLoaded: CarouselifyConfigInterface = bindElementWithConfiguration.get(element) ?? INITIAL_CONFIGURATION_CAROUSELIFY
+  const configurationLoaded: CarouselifyConfigInterface =
+    bindElementWithConfiguration.get(element) ?? INITIAL_CONFIGURATION_CAROUSELIFY
   const initialConfiguration = { ...configurationLoaded }
   setConfigurationInlineStyles(element, initialConfiguration)
   if ((configurationLoaded.responsive?.length ?? 0) > 0) {
@@ -122,7 +133,8 @@ const getCarouselElementItemsLength = (element: Element): number => {
 }
 
 const getCarouselSlidesToShow = (element: Element): number => {
-  const configurationLoaded: CarouselifyConfigInterface = bindElementWithConfiguration.get(element) ?? INITIAL_CONFIGURATION_CAROUSELIFY
+  const configurationLoaded: CarouselifyConfigInterface =
+    bindElementWithConfiguration.get(element) ?? INITIAL_CONFIGURATION_CAROUSELIFY
   const itemsToShow = configurationLoaded.itemsToShow ?? 1
   return Math.ceil(getCarouselElementItemsLength(element) / itemsToShow) - 1
 }
@@ -130,13 +142,14 @@ const getCarouselSlidesToShow = (element: Element): number => {
 const attachControlsHandler = (element: Element) => {
   const controlsButtons = element.getElementsByClassName(DOM_STRING.controls)
   const dotsIndicatorsElements = element.getElementsByClassName(DOM_STRING.dot)
-  const configurationLoaded: CarouselifyConfigInterface = bindElementWithConfiguration.get(element) ?? INITIAL_CONFIGURATION_CAROUSELIFY
+  const configurationLoaded: CarouselifyConfigInterface =
+    bindElementWithConfiguration.get(element) ?? INITIAL_CONFIGURATION_CAROUSELIFY
   const isAutoPlay = configurationLoaded.autoPlay ?? false
   const trottlingTransition = configurationLoaded.transitionThrottling
   let currentIndex = 0
   // let oldIndex = currentIndex
 
-  for (const controlButton of (controlsButtons as any)) {
+  for (const controlButton of controlsButtons as any) {
     controlButton.addEventListener('click', (e: Event) => {
       const originalTarget = e.currentTarget as Element
       handleControlSlide(element, originalTarget.matches(`.${DOM_STRING.prevControl}`) ? -1 : 1)
@@ -146,8 +159,7 @@ const attachControlsHandler = (element: Element) => {
   for (let index = 0; index < dotsIndicatorsElements.length; index++) {
     const dotElement = dotsIndicatorsElements[index]
     /* eslint-disable  no-loop-func*/
-    dotElement.addEventListener('click', () => handleControlSlide(element, index - currentIndex)
-    )
+    dotElement.addEventListener('click', () => handleControlSlide(element, index - currentIndex))
   }
 
   const handleControlSlide = (element: Element, order: number) => {
@@ -155,7 +167,7 @@ const attachControlsHandler = (element: Element) => {
     let value = currentIndex + order
     value = value > slidesToShow ? 0 : value
     //  oldIndex = currentIndex
-    currentIndex = Math.max(0, Math.min((slidesToShow), value))
+    currentIndex = Math.max(0, Math.min(slidesToShow, value))
     setInlineStyles(element, CUSTOM_PROPERTIES.slide, currentIndex + '')
     //  setDotIndicator(currentIndex)
   }
@@ -167,7 +179,6 @@ const attachControlsHandler = (element: Element) => {
    } */
 
   if (isAutoPlay) setInterval(handleControlSlide, trottlingTransition, element, 1)
-
 }
 
 const setInlineStyles = (element: Element, property: string, value: string) => {
@@ -175,8 +186,7 @@ const setInlineStyles = (element: Element, property: string, value: string) => {
   carouselifyElementInlineStyles.setProperty(property, value)
 }
 
-const isValidCarouselifyElement = (element: Element) => element !== null && document.contains(element) && element.matches(`.${DOM_STRING.carouselify}`)
-
+const isValidCarouselifyElement = (element: Element) =>
+  element !== null && document.contains(element) && element.matches(`.${DOM_STRING.carouselify}`)
 
 export { initCarouselify }
-

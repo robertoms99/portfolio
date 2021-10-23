@@ -5,8 +5,8 @@ import './index.scss'
 import store from './config/store'
 import { Provider } from 'react-redux'
 
-class Main{
-  static loadView(){
+class Main {
+  static loadView() {
     ReactDOM.render(
       <React.StrictMode>
         <Provider store={store}>
@@ -17,7 +17,7 @@ class Main{
     )
   }
 
-  static main(){
+  static main() {
     Main.loadView()
   }
 }
