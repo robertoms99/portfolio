@@ -1,1 +1,1 @@
-export { initializerCaretAnimations } from './caretify';
+export { initializerCaretAnimations } from './caretify'

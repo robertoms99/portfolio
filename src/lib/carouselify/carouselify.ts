@@ -82,11 +82,11 @@ const attachMatchMediaHandler = (
 
   const mqList1 = window.matchMedia(`(max-width: ${(DEVICES_BREAKPOINTS.get('MD') ?? 0) - 1}em)`)
   const mqList2 = window.matchMedia(
-    `(max-width: ${
-      (DEVICES_BREAKPOINTS.get('LG') ?? 0) - 1
-    }em) and (min-width: ${DEVICES_BREAKPOINTS.get('MD')}em)`
+    `(max-width: ${(DEVICES_BREAKPOINTS.get('LG') ?? 0) - 1}em) and (min-width: ${
+      DEVICES_BREAKPOINTS.get('MD') ?? 0
+    }em)`
   )
-  const mqList3 = window.matchMedia(`(min-width: ${DEVICES_BREAKPOINTS.get('LG')}em)`)
+  const mqList3 = window.matchMedia(`(min-width: ${DEVICES_BREAKPOINTS.get('LG') ?? 0}em)`)
   mqList1.addEventListener('change', testMqList)
   mqList2.addEventListener('change', testMqList)
   mqList3.addEventListener('change', testMqList)
@@ -105,9 +105,9 @@ const applyConfiguration = (element: Element) => {
 }
 
 const setConfigurationInlineStyles = (element: Element, config: CarouselifyConfigInterface) => {
-  setInlineStyles(element, CUSTOM_PROPERTIES.itemsToShow, (config.itemsToShow ?? 1) + '')
+  setInlineStyles(element, CUSTOM_PROPERTIES.itemsToShow, `${config.itemsToShow ?? 1})`)
   setInlineStyles(element, CUSTOM_PROPERTIES.slide, '0')
-  setInlineStyles(element, CUSTOM_PROPERTIES.translateDuration, (config.throttling ?? 300) + '')
+  setInlineStyles(element, CUSTOM_PROPERTIES.translateDuration, `${config.throttling ?? 300}`)
   // renderDotsIndicators(element)
 }
 
@@ -158,7 +158,7 @@ const attachControlsHandler = (element: Element) => {
 
   for (let index = 0; index < dotsIndicatorsElements.length; index++) {
     const dotElement = dotsIndicatorsElements[index]
-    /* eslint-disable  no-loop-func*/
+    /* eslint-disable  no-loop-func */
     dotElement.addEventListener('click', () => handleControlSlide(element, index - currentIndex))
   }
 
@@ -168,7 +168,7 @@ const attachControlsHandler = (element: Element) => {
     value = value > slidesToShow ? 0 : value
     //  oldIndex = currentIndex
     currentIndex = Math.max(0, Math.min(slidesToShow, value))
-    setInlineStyles(element, CUSTOM_PROPERTIES.slide, currentIndex + '')
+    setInlineStyles(element, CUSTOM_PROPERTIES.slide, `${currentIndex}`)
     //  setDotIndicator(currentIndex)
   }
 

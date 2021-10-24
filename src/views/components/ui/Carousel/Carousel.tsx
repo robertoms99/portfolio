@@ -1,15 +1,17 @@
-import React, { forwardRef } from "react"
+import React, { forwardRef } from 'react'
 import cn from 'classnames'
 
-const Carousel= ({children,className=''}:any,ref:any)=>{
-    const items = ('length' in children) ? React.Children.map(children,(child)=>(
+const Carousel = ({ children, className = '' }: any, ref: any) => {
+  const items = ('length' in children)
+    ? React.Children.map(children, (child) => (
         <div className="carouselify__item">
             {child}
         </div>
-    )) : []
+    ))
+    : []
 
-    return (
-        <div className={cn('carouselify',className)} ref={ref}>
+  return (
+        <div className={cn('carouselify', className)} ref={ref}>
             <div className="carouselify__wrapper">
                 <div className="carouselify__container">
                     <div className="carouselify__controls">
@@ -20,7 +22,7 @@ const Carousel= ({children,className=''}:any,ref:any)=>{
                 </div>
             </div>
       </div>
-    )
+  )
 }
 
 export default forwardRef(Carousel)

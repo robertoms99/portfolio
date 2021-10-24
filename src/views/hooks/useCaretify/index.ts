@@ -1,1 +1,1 @@
-export {default} from './useCaretify'
+export { default } from './useCaretify'

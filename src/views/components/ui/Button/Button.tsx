@@ -8,7 +8,7 @@ const Button = ({ children, className = '', ...restProps }: any) => {
   )
 }
 
-/* eslint-disable import/no-anonymous-default-export*/
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   Primary: ({ className = '', ...restProps }) => (
     <Button className={cn('button--primary', className)} {...restProps} />

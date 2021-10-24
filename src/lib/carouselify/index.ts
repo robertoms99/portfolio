@@ -1,1 +1,1 @@
-export { initCarouselify } from './carouselify';
+export { initCarouselify } from './carouselify'

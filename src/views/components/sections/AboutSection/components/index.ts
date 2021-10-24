@@ -1,2 +1,2 @@
-export {default as Banner} from './Banner'
-export {default as Socials} from './Socials'
+export { default as Banner } from './Banner'
+export { default as Socials } from './Socials'

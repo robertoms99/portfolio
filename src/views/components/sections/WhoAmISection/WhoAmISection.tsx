@@ -8,7 +8,7 @@ const WhoAmISection = () => {
       <div className="who-am-wrapper">
         <article className="[  who-am-banner who-am-banner--left ] [ col-left col-left--smallest ]">
           <div className="me-wrapper">
-            <Media className={cn('me', true ? 'show' : '')} object={MeImage} />
+            <Media className={cn('me', 'show')} object={MeImage} />
           </div>
         </article>
         <article className="[ col-right ] [ who-am-banner who-am-banner--right ]">

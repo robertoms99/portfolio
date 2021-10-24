@@ -1,1 +1,1 @@
-export {default} from './WhoAmISection'
+export { default } from './WhoAmISection'

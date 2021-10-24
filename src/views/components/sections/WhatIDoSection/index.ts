@@ -1,1 +1,1 @@
-export {default } from './WhatIDoSection'
+export { default } from './WhatIDoSection'

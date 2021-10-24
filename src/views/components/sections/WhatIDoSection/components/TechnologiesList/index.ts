@@ -1,1 +1,1 @@
-export {default} from './TechnologiesList'
+export { default } from './TechnologiesList'

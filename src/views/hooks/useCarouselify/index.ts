@@ -1,1 +1,1 @@
-export {default} from './useCarouselify'
+export { default } from './useCarouselify'

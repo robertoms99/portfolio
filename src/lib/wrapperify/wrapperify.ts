@@ -9,7 +9,7 @@ export const compose = function (callbacks: Function[]) {
 }
 
 export const debounce = function (callback: Function, delay: number) {
-  let timeoutId = 0
+  const timeoutId = 0
   return function (this: any, ...args: any[]) {
     clearTimeout(timeoutId)
     setTimeout(() => callback.apply(this, args), delay)
@@ -41,8 +41,10 @@ export const delayed = function (callback: Function, delay: number) {
 export const curry = (callback: Function) => {
   return function partial(this: any, ...args: any[]) {
     if (args.length === callback.length) return callback.apply(this, args)
-    else return function (this: any, ...restArgs: any[]) {
-      return partial.apply(this, args.concat(restArgs))
+    else {
+      return function (this: any, ...restArgs: any[]) {
+        return partial.apply(this, args.concat(restArgs))
+      }
     }
   }
 }
