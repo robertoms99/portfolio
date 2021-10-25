@@ -38,7 +38,7 @@
     "lint:style": "stylelint --fix --ignore-disables --cache --report-invalid-scope-disables --report-needless-disables --formatter=verbose --cache-location \".cache/\"",
     "lint:commit": "commitlint --color --format --verbose --edit",
     "format-code": "prettier --write --no-error-on-unmatched-pattern --ignore-unknown",
-    "lint:ecma": "eslint --fix --no-error-on-unmatched-pattern --cache --format=codeframe --ext .js,.jsx,.ts,.tsx --cache-location \".cache/\""
+    "lint:ecma": "eslint --fix   --quiet --no-error-on-unmatched-pattern --cache --format=codeframe --ext .js,.jsx,.ts,.tsx --cache-location \".cache/\""
   },
   "browserslist": {
     "production": [
