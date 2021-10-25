@@ -1,0 +1,3 @@
+# any file distinct .{css,scss,sass}
+*
+!(*.{css,scss,sass})

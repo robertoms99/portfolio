@@ -17,6 +17,10 @@
     "prettier": "^2.4.1",
     "react-scripts": "4.0.3",
     "sass": "^1.42.1",
+    "stylelint": "^14.0.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-scss": "^4.0.0",
     "typescript": "^4.4.4"
   },
   "dependencies": {
@@ -34,6 +38,7 @@
     "quality-code": "lint-staged --verbose ",
     "build": "react-scripts build",
     "prepare": "npx husky install",
+    "lint:style": "stylelint --fix --ignore-disables --cache --report-invalid-scope-disables --report-needless-disables --formatter=verbose --cache-location \".cache/\"",
     "lint:commit": "commitlint --color --format --verbose --edit",
     "format-code": "prettier --write --no-error-on-unmatched-pattern --ignore-unknown",
     "lint:ecma": "eslint --fix --no-error-on-unmatched-pattern --cache --format=codeframe --ext .js,.jsx,.ts,.tsx --cache-location \".cache/\""
