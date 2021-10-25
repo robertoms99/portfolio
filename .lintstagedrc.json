@@ -1,4 +1,3 @@
 {
-  "*": ["npm run format-code", "npm run lint:ecma"],
-  "*.{css,scss,sass}": "npm run lint:style"
+  "*": ["npm run format-code", "npm run lint:ecma"]
 }

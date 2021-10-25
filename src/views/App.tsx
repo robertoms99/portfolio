@@ -1,6 +1,11 @@
 import { useSelector } from 'react-redux'
-import { AboutSection, WhatIDoSection, WhoAmISection, Footer } from './components/sections'
-import ProjectsSection from './components/sections/ProjectsSection/ProjectsSection'
+import {
+  AboutSection,
+  WhatIDoSection,
+  WhoAmISection,
+  Footer,
+  ProjectsSection
+} from './components/sections'
 import { useCaretify, useTheme } from './hooks'
 import { RootState } from '../config/interfaces/state.interface'
 
