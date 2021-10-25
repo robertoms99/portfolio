@@ -9,9 +9,12 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "eslint": "^7.32.0",
     "eslint-config-standard-with-typescript": "^21.0.1",
     "husky": "^7.0.4",
+    "lint-staged": "^11.2.4",
     "netlify-cli": "^6.9.28",
+    "prettier": "^2.4.1",
     "react-scripts": "4.0.3",
     "sass": "^1.42.1",
     "typescript": "^4.4.4"
@@ -28,9 +31,12 @@
   "scripts": {
     "deploy": "yarn build && netlify deploy --prod",
     "start": "react-scripts start",
+    "quality-code": "lint-staged --verbose ",
     "build": "react-scripts build",
     "prepare": "npx husky install",
-    "lint:commit": "commitlint --color --format --verbose --edit"
+    "lint:commit": "commitlint --color --format --verbose --edit",
+    "format-code": "prettier --write --no-error-on-unmatched-pattern --ignore-unknown",
+    "lint:ecma": "eslint --fix --no-error-on-unmatched-pattern --cache --format=codeframe --ext .js,.jsx,.ts,.tsx --cache-location \".cache/\""
   },
   "browserslist": {
     "production": [
