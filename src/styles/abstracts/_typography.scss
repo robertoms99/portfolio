@@ -5,13 +5,13 @@
   font-weight: bold;
   &--primary {
     @include responsive('md') {
-      font-size: 4em;
+      font-size: 3.5em;
     }
     @include responsive('xxlg') {
-      font-size: 5em;
+      font-size: 4.5em;
     }
     @include responsive('xxxlg') {
-      font-size: 7em;
+      font-size: 6.5em;
     }
     font-size: 3em;
   }
