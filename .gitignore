@@ -26,3 +26,6 @@ yarn-error.log*
 .netlify/
 
 .cache/
+
+# generated folder to old url
+.old-production/

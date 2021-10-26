@@ -1,5 +1,4 @@
 import { PROJECTS_LIST } from '../../../../config/contants'
-import { useCarouselify } from '../../../hooks'
 import { CaretSubtitle, Heading } from '../../ui'
 import Carousel from '../../ui/Carousel/Carousel'
 import ProjectItem from './components/ProjectItem'
