@@ -1,1 +1,0 @@
-export { initCarouselify } from './carouselify'

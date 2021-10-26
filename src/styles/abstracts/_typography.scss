@@ -7,25 +7,28 @@
     @include responsive('md') {
       font-size: 4em;
     }
-    @include responsive('xlg') {
+    @include responsive('xxlg') {
       font-size: 5em;
     }
-    @include responsive('xxlg') {
+    @include responsive('xxxlg') {
       font-size: 7em;
     }
     font-size: 3em;
   }
   &--tertiary {
     font-weight: 500;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
 .heading--accent {
-  @include responsive('lg') {
+  @include responsive('xxlg') {
     font-size: 2em;
   }
-  font-size: 1.5em;
+  @include responsive('lg') {
+    font-size: 1.3em;
+  }
+  font-size: 1.12em;
 }
 
 .heading--accent,

@@ -44,7 +44,7 @@
   margin: 3em auto;
   opacity: 0;
   transform: translate(20%, -20%);
-  transition: all 300ms 650ms;
+  transition: transform 300ms 650ms;
   img {
     // object-position: -2.5rem !important;
   }

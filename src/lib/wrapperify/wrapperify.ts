@@ -4,15 +4,18 @@ export const nth = (times: number, callback: (index: number) => any) => {
 
 export const compose = function (callbacks: Function[]) {
   return function (this: any, ...args: any[]) {
-    return callbacks.reduceRight((args: any[], callback: Function) => callback.apply(this, args), args)
+    return callbacks.reduceRight(
+      (args: any[], callback: Function) => callback.apply(this, args),
+      args
+    )
   }
 }
 
 export const debounce = function (callback: Function, delay: number) {
-  const timeoutId = 0
+  let timeoutId = 0
   return function (this: any, ...args: any[]) {
     clearTimeout(timeoutId)
-    setTimeout(() => callback.apply(this, args), delay)
+    timeoutId = setTimeout(() => callback.apply(this, args), delay) as unknown as number
   }
 }
 
