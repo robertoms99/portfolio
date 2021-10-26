@@ -2,68 +2,30 @@
 @use '../../abstracts/variables' as *;
 
 .project {
-  --project-item-width: 85%;
+  --width: 100%;
   --height-relation: 4;
   --width-relation: 3;
-  --aspect-width-ratio: (var(--project-item-width) / var(--width-relation));
-  background-color: var(--color-white);
-  box-shadow: 0 0 4rem -0.75rem rgba(0, 0, 0, 0.2);
-  min-height: 30rem;
-  margin: 2em auto;
-  width: var(--project-item-width);
+  --aspect-width-ratio: (var(--width) / var(--width-relation));
   padding-top: calc(var(--aspect-width-ratio) * var(--height-relation));
   position: relative;
+  width: var(--width);
+  border: 1px solid red;
+  margin: 1em;
   @include responsive('sm') {
-    --project-item-width: 90%;
+    --width: 33rem;
   }
 
   &__wrapper {
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
     position: absolute;
     top: 0;
     bottom: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   &__media {
-    max-width: 100%;
-    height: 30rem;
-    overflow: hidden;
-  }
-
-  &__media,
-  &__content {
-    width: 100%;
-  }
-
-  &__content {
-    flex: 1;
-    background-color: var(--color-transparent-white);
-    border: 1px solid var(--color-light-grey);
-    padding: 1em 2em;
-    text-transform: capitalize;
-  }
-
-  &__heading {
-    font-size: 1.25em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.5em;
-  }
-  &__link {
-    &:not(:last-child) {
-      margin-right: 0.25em;
-    }
-  }
-  &__options {
-    flex-shrink: 0;
-  }
-  &__icon {
-    fill: currentColor;
-    width: 0.75em;
-    height: 0.75em;
+    height: 60%;
   }
 }
 

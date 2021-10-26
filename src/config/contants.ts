@@ -123,15 +123,6 @@ const PROJECTS_LIST = [
     links: {
       github: 'https://github.com/robertoms99/portfolio'
     }
-  },
-  {
-    id: 4,
-    image: IPProject,
-    title: 'github-jobs-challenge',
-    description: 'This is a challenge to github job challenge (https://devchallenges.io/)',
-    links: {
-      github: 'https://github.com/robertoms99/github-jobs-challenge'
-    }
   }
 ]
 
