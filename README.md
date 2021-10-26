@@ -4,9 +4,7 @@ Este proyecto es mi portafolio profesional donde muestro mis skills, que experie
 
 ## **CAPTURAS**
 
-<figure style="width:100%; height: 500px">
-  <img src="https://user-images.githubusercontent.com/54558382/138936350-ad30cf51-964e-4464-af53-24cbb0cea726.png" style="width:100%; height:100%; object-fit:cover"/>
-</figure>
+ <img src="https://user-images.githubusercontent.com/54558382/138950994-f2b03b89-a38f-46d3-aed3-3085bbb9d663.png" style="margin:auto; height:700px; object-fit:cover"/>
 
 ## **DEMO**
 
