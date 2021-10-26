@@ -6,6 +6,4 @@ const toggleThemeAction = () => {
   }
 }
 
-export {
-  toggleThemeAction
-}
+export { toggleThemeAction }

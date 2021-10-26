@@ -1,10 +1,6 @@
-import {
-  ACTIONS_TYPES,
-  INITIAL_STATE,
-  STORAGE_THEME_VALUES
-} from '../config/contants'
+import { ACTIONS_TYPES, INITIAL_STATE, STORAGE_THEME_VALUES } from '../config/contants'
 
-const reducer = (currentState = INITIAL_STATE, action: any) => {
+const reducer = (currentState = INITIAL_STATE, action: { type: string; payload?: any }) => {
   switch (action.type) {
     case ACTIONS_TYPES.TOGGLE_DARK:
       return {

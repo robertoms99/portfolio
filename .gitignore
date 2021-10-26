@@ -23,4 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # Local Netlify folder
-.netlify
+.netlify/
+
+.cache/
+
+# generated folder to old url
+.old-production/

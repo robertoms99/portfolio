@@ -1,21 +1,19 @@
 import { PROJECTS_LIST } from '../../../../config/contants'
-import { useCarouselify } from '../../../hooks'
+import { CaretSubtitle, Heading } from '../../ui'
 import Carousel from '../../ui/Carousel/Carousel'
 import ProjectItem from './components/ProjectItem'
 
 const ProjectsSection = () => {
-  const { carouselifyRef } = useCarouselify()
-
   return (
     <section className="[ section ] [ projects ]" id="projects">
       <div className="projects-wrapper">
-        <h4 className="[ heading heading--accent ] [ caret ]">mis proyectos</h4>
-        <h1 className="heading heading--primary">ultimos trabajos</h1>
-        <Carousel className="projects__carousel" ref={carouselifyRef}>
+        <CaretSubtitle text="mis proyectos" />
+        <Heading.Primary text="ultimos trabajos" />
+        <div className="projects-list">
           {PROJECTS_LIST.map((PROJECT) => (
             <ProjectItem key={PROJECT.id} project={PROJECT} />
           ))}
-        </Carousel>
+        </div>
       </div>
     </section>
   )

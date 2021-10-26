@@ -1,4 +1,5 @@
 import { FEATURES_LIST } from '../../../../config/contants'
+import { CaretSubtitle, Heading } from '../../ui'
 import { Feature } from './components'
 import TechnologiesList from './components/TechnologiesList'
 
@@ -7,8 +8,8 @@ const WhatIDoSection = () => {
     <section className="[ what-do ]">
       <div className="what-do-wrapper">
         <article className="[ what-do-banner what-do-banner--left ] [ col-left ]">
-          <h4 className="[ heading heading--accent ] [ caret ]">mis skills</h4>
-          <h1 className="heading heading--primary">Lo que hago</h1>
+          <CaretSubtitle text="mis skills" />
+          <Heading.Primary text="que hago" />
           <p className="[ paragraph ] [ what-do-description ] [ block-decoration ]">
             Desarrollo de interfaces rápidas y accesibles con capacidad de adaptacion. Me gusta usar
             técnicas como <span className="accent"> mobile first </span> para lograrlo. Aparte de

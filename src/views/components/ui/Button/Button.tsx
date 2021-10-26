@@ -1,6 +1,7 @@
 import cn from 'classnames'
+import IButtonComponent from './Button.interface'
 
-const Button = ({ children, className = '', ...restProps }: any) => {
+const Button = ({ children, className = '', ...restProps }: IButtonComponent) => {
   return (
     <button className={cn('button', className)} {...restProps}>
       {children}
@@ -8,9 +9,8 @@ const Button = ({ children, className = '', ...restProps }: any) => {
   )
 }
 
-/* eslint-disable import/no-anonymous-default-export */
 export default {
-  Primary: ({ className = '', ...restProps }) => (
+  Primary: ({ className = '', ...restProps }: IButtonComponent) => (
     <Button className={cn('button--primary', className)} {...restProps} />
   )
 }

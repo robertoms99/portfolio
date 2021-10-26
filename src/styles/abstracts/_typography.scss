@@ -4,15 +4,31 @@
   text-transform: uppercase;
   font-weight: bold;
   &--primary {
-    font-size: 3.5em;
     @include responsive('md') {
-      font-size: 3.2em;
+      font-size: 4em;
     }
+    @include responsive('xxlg') {
+      font-size: 5em;
+    }
+    @include responsive('xxxlg') {
+      font-size: 7em;
+    }
+    font-size: 3em;
   }
   &--tertiary {
     font-weight: 500;
-    font-size: 1.35em;
+    font-size: 1.5em;
   }
+}
+
+.heading--accent {
+  @include responsive('xxlg') {
+    font-size: 2em;
+  }
+  @include responsive('lg') {
+    font-size: 1.3em;
+  }
+  font-size: 1.12em;
 }
 
 .heading--accent,
