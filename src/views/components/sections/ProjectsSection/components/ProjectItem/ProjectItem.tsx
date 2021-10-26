@@ -1,7 +1,8 @@
-import { ExternalIcon, GithubIcon } from '../../../../assets'
 import { Icon, Link, Media } from '../../../../ui'
+import { ExternalIcon, GithubIcon } from '../../../../assets'
+import IProjectItemComponent from './ProjectItem.interface'
 
-const ProjectItem = ({ project }: any) => {
+const ProjectItem = ({ project }: IProjectItemComponent) => {
   return (
     <div className="project">
       <div className="project__wrapper">

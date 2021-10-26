@@ -1,19 +1,17 @@
-import { MeImage, MyCV } from '../../assets'
-import { Button, Link, Media } from '../../ui'
-import cn from 'classnames'
+import { MyCV } from '../../assets'
+import { Button, CaretSubtitle, Heading, Link, Media } from '../../ui'
+import { MePhoto } from './components'
 
 const WhoAmISection = () => {
   return (
     <section className="[ section ] [ who-am ]">
       <div className="who-am-wrapper">
         <article className="[  who-am-banner who-am-banner--left ] [ col-left col-left--smallest ]">
-          <div className="me-wrapper">
-            <Media className={cn('me', 'show')} object={MeImage} />
-          </div>
+          <MePhoto />
         </article>
         <article className="[ col-right ] [ who-am-banner who-am-banner--right ]">
-          <h4 className="[ heading heading--accent ] [ caret ]">sobre mi</h4>
-          <h1 className="heading heading--primary">Quien soy</h1>
+          <CaretSubtitle text="sobre mi" />
+          <Heading.Primary text="Quien soy" />
           <p className="[ paragraph ] [ about-description ] [ block-decoration ] [ who-am-description ]">
             Soy Roberto Molina, software developer colombiano entusiasmado por aprender más todos
             los días y que le gusta trabajar en equipo. Mi gusto por el desarrollo comenzó en{' '}

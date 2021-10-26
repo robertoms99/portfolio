@@ -1,5 +1,5 @@
-import { SOCIALS_ITEMS } from '../../../../../../config/contants'
 import { Icon, Link } from '../../../../ui'
+import { SOCIALS_ITEMS } from '../../../../../../config/contants'
 
 const Socials = () => {
   return (
@@ -10,7 +10,8 @@ const Socials = () => {
           href={SOCIAL.link}
           target="_blank"
           title={SOCIAL.title}
-          key={SOCIAL.id}>
+          key={SOCIAL.id}
+        >
           <Icon className="socials__icon" SvgElement={SOCIAL.icon} />
         </Link>
       ))}

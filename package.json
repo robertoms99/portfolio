@@ -12,6 +12,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^11.2.4",
     "netlify-cli": "^6.9.28",
+    "prettier": "^2.4.1",
     "react-scripts": "4.0.3",
     "sass": "^1.42.1",
     "stylelint": "^14.0.0",
