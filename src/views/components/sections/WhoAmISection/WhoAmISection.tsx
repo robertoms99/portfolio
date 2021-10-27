@@ -13,9 +13,9 @@ const WhoAmISection = () => {
           <CaretSubtitle text="sobre mi" />
           <Heading.Primary text="Quien soy" />
           <p className="[ paragraph ] [ about-description ] [ block-decoration ] [ who-am-description ]">
-            Soy Roberto Molina, software developer colombiano entusiasmado por aprender más todos
-            los días y que le gusta trabajar en equipo. Mi gusto por el desarrollo comenzó en{' '}
-            <span className="accent"> 2020 </span> cuando comencé a ver hermosas páginas web. Desde
+            Soy Roberto Molina, un software developer autodidacta y apasionado por aprender más
+            todos los días sobre nuevas tecnologias. Mi gusto por el desarrollo comenzó en
+            <span className="accent"> 2019 </span> cuando comencé a ver hermosas páginas web. Desde
             entonces me he sumergido en un rápido avance para crecer como profesional y aprovechar
             al máximo mi tiempo.
             <br />
